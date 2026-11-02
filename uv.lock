@@ -578,7 +578,7 @@ wheels = [
 ]
 
 [[package]]
-name = "nlp"
+name = "nlp-03-text-exploration-custom"
 version = "0.1.0"
 source = { editable = "." }
 default-groups = "all"

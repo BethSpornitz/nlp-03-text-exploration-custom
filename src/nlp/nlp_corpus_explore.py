@@ -209,7 +209,7 @@ for category in token_df["category"].unique().to_list():
 #   - up to 2 tokens before the target token
 #   - up to 2 tokens after the target token
 # The target token itself is not included in its context list.
-WINDOW_SIZE: int = 2
+WINDOW_SIZE: int = 3
 
 # Define a new empty dictionary to store the co-occurrence information.
 # The keys will be target tokens,
@@ -318,9 +318,18 @@ print("- Co-occurrence reveals contextual relationships between words.")
 print("- Bigrams capture local structure beyond single tokens.")
 print("- Patterns emerge before any machine learning is applied.")
 
-print("\nYOURNAME SPECIFIC OBSERVATIONS:")
-print("TODO")
-
+print("\nBETH SPORNITZ SPECIFIC OBSERVATIONS:")
+print("- Increasing the context window from 2 to 3 revealed additional nearby words.")
+print("- The context for 'dog' increased from 7 to 9 words, adding 'kennel' and 'the'.")
+print("- The context for 'cat' increased from 8 to 9 words, adding another 'the'.")
+print("- The context for 'car' increased from 8 to 10 words, adding 'road' and 'the'.")
+print(
+    "- The context for 'truck' increased from 7 to 9 words, adding 'engine' and 'loads'."
+)
+print(
+    "- A larger context window captures more surrounding words, but not all are useful."
+)
+print("- Global word frequencies and bigram counts remained unchanged.")
 
 # ============================================================
 # END

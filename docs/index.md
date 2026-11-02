@@ -1,90 +1,79 @@
-# Web Mining and Applied NLP Project Report
 
-Web Mining and Applied NLP | Project 03 | Example Report
+# Analytics Job Description Text Exploration
+
+Web Mining and Applied NLP | Project 03 | Custom Project Report
 
 ## Overview
 
-This project introduces exploratory analysis
-of text corpora.
+This project explores how vocabulary and language patterns differ across three analytics-related job categories: Data Analyst, Business Analyst, and Data Governance.
 
-The objective is to examine how patterns
-emerge from token distributions,
-category comparisons,
-word co-occurrence,
-and local word sequences.
+The goal is to examine not only individual word frequencies but also the relationships between words. In particular, the project will explore whether co-occurrence and bigram analysis can help identify technical skills and multiword phrases that individual word counts may overlook.
 
-The project demonstrates how observable
-structure in text can be studied
-before applying statistical language models
-or machine learning.
+The project builds on the text exploration techniques demonstrated in the course example.
+
+## Project Progress
+
+### Phase 4: Technical Modification
+
+The instructor's example corpus contains 22 documents organized into four categories: dogs, cats, cars, and trucks.
+
+The context window was increased from two words to three words to examine how this change affects co-occurrence results.
+
+The larger window identified additional surrounding words, including "kennel" near "dog" and "engine" and "loads" near "truck." It also included additional common words, demonstrating that a larger context window does not necessarily produce more informative results.
+
+### Phase 5: Custom Application
+
+The custom application will analyze 12 paraphrased job descriptions organized into three categories:
+
+| Category | Documents |
+|---|---:|
+| Data Analyst | 4 |
+| Business Analyst | 4 |
+| Data Governance | 4 |
+| **Total** | **12** |
+
+The planned analysis includes:
+
+- Global token frequency analysis.
+- Comparisons of word frequencies across job categories.
+- Word co-occurrence analysis.
+- Bigram analysis to identify recurring two-word phrases.
+- Visualizations of vocabulary patterns.
+
+The results and interpretations will be added after the custom analysis is completed.
 
 ## Tools and Methods
 
-The project uses:
-
-- Python for corpus exploration and analysis.
-- A small labeled corpus of text documents.
-- Tokenization and normalization for text preparation.
+- Python for text processing and analysis.
 - Polars for frequency distributions and category comparisons.
-- Context windows for examining word co-occurrence.
-- Bigrams for analyzing consecutive word pairs.
-- Matplotlib for visualizing token distributions.
-- Logging for execution records.
+- Context windows for word co-occurrence analysis.
+- Bigrams for examining consecutive word pairs.
+- Matplotlib for visualizations.
 - Ruff, ty, and pytest for code verification.
 - Zensical and GitHub Pages for published documentation.
 
-The example corpus contains 22 documents
-organized into four categories:
-dogs, cats, cars, and trucks.
+## Results and Interpretation
 
-The analysis compares vocabulary across categories
-and examines which words appear near one another.
+*This section will be completed after Phase 5.*
 
-## Verification
-
-A successful execution displays:
-
-    Pipeline executed successfully!
-
-The script records execution details in a project log.
-
-The output includes global token frequencies,
-category frequency distributions,
-co-occurrence examples,
-bigram frequencies, and visualizations.
-
-Automated tests provide additional verification
-of the project's expected behavior.
-
-## Interpretation
-
-Word frequencies provide information
-about the vocabulary of a corpus.
-
-Category comparisons reveal differences
-in how words are distributed across documents.
-
-Co-occurrence and bigrams provide additional
-information about local word context.
-
-These concepts help establish an understanding
-of distributional language patterns
-used in statistical NLP,
-word embeddings, and modern language models.
+The final report will describe the most common words and phrases, differences between job categories, co-occurrence patterns, and the limitations of using a small collection of paraphrased job descriptions.
 
 ## Documentation Index
 
-- **Home** - this landing page
-- [**Project Instructions**](project-instructions.md)
-- [**Glossary**](glossary.md)
+- **Home** — this project report.
+- [Project Instructions](project-instructions.md)
+- [Glossary](glossary.md)
 
 ## Project Links
 
-- [GitHub Repository](https://github.com/denisecase/nlp-03-text-exploration)
-- [Example Script](https://github.com/denisecase/nlp-03-text-exploration/blob/main/src/nlp/nlp_corpus_explore.py)
+- [GitHub Repository](https://github.com/BethSpornitz/nlp-03-text-exploration-custom)
+- [Python Analysis Script](https://github.com/BethSpornitz/nlp-03-text-exploration-custom/blob/main/src/nlp/nlp_corpus_explore.py)
+- [Published Project Website](https://bethspornitz.github.io/nlp-03-text-exploration-custom/)
 
-## Project Resources
+## Project Resources and Attribution
 
-- [Project Instructions](project-instructions.md)
+This project is adapted from the instructional example developed by Denise M. Case for Web Mining and Applied NLP.
+
+- [Original Example Repository](https://github.com/denisecase/nlp-03-text-exploration)
 - [Professional Python Guide](https://denisecase.github.io/pro-analytics-02/)
 - [Professional Python Project Explainer](https://pup-pack.github.io/professional-python-project-explainer/)
