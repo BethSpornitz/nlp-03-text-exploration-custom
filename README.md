@@ -1,83 +1,70 @@
-# nlp-03-text-exploration
+# nlp-03-text-exploration-custom
 
 [![Python 3.14](https://img.shields.io/badge/python-3.14%2B-blue?logo=python)](pyproject.toml)
-[![CI](https://github.com/denisecase/nlp-03-text-exploration/actions/workflows/ci-python-zensical.yml/badge.svg)](https://github.com/denisecase/nlp-03-text-exploration/actions/workflows/ci-python-zensical.yml)
-[![Documentation](https://img.shields.io/badge/docs-site-blue?logo=github)](https://denisecase.github.io/nlp-03-text-exploration/)
+[![CI](https://github.com/BethSpornitz/nlp-03-text-exploration-custom/actions/workflows/ci-python-zensical.yml/badge.svg)](https://github.com/BethSpornitz/nlp-03-text-exploration-custom/actions/workflows/ci-python-zensical.yml)
+[![Documentation](https://img.shields.io/badge/docs-site-blue?logo=github)](https://bethspornitz.github.io/nlp-03-text-exploration-custom/)
 
 [![uv managed](https://img.shields.io/badge/uv-managed-DE5FE9)](https://docs.astral.sh/uv/)
 [![ty type checked](https://img.shields.io/badge/ty-type_checked-2F80ED)](https://docs.astral.sh/ty/)
 [![Zensical docs](https://img.shields.io/badge/Zensical-docs-purple)](https://zensical.org/)
 [![MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
 
-> Explore text corpora using token frequencies, categories, and contextual patterns.
+> Exploring language, technical skills, and common phrases across analytics job descriptions.
 
 ## Project Overview
 
-Author: Denise Case
+Author: Beth Spornitz
 
-Date: 2026 October
+Date: 2026 November
 
 Third project in the Web Mining and Applied NLP course.
 
-This project introduces exploratory text analysis.
+This project explores patterns in job descriptions for three analytics career categories: Data Analyst, Business Analyst, and Data Governance.
 
-The goal is to examine a collection of text documents,
-identify patterns in vocabulary,
-compare categories,
-and explore relationships between words.
+The analysis will explore token frequencies, category comparisons, word co-occurrence, and bigrams. Particular attention will be given to multi-word expressions such as "Power BI," "data quality," and "business requirements."
 
-These techniques provide foundations for understanding
-more advanced NLP methods, including
-language representations and embeddings.
+The goal is to investigate which technical skills and terminology appear across these career categories and identify patterns that individual word frequencies may not reveal.
 
-The project is configured in
-[pyproject.toml](pyproject.toml).
+The project is configured in [pyproject.toml](pyproject.toml).
 
 ## Data
 
-The example uses a small, controlled text corpus
-defined directly in the Python script.
+This project uses 12 job descriptions from a previous Module 2 project, divided into three categories:
 
-The corpus contains 22 short documents
-organized into four categories:
+- Data Analyst: 4 job descriptions
+- Business Analyst: 4 job descriptions
+- Data Governance: 4 job descriptions
 
-- Dogs.
-- Cats.
-- Cars.
-- Trucks.
+Each job description includes the job title, employer, source link, and a rewritten description of the position.
 
-Each document includes a category label
-and a short text passage.
+The descriptions will be used to compare the language and skills mentioned in different types of analytics jobs. The analysis will also look at phrases like "Power BI," "data quality," and "business requirements" to see what can be learned by examining words together rather than individually.
 
-No external input dataset or web connection is required.
+Because the dataset includes only 12 job descriptions, the results will be used to explore patterns rather than draw conclusions about the entire job market.
 
 ## Approach
 
-The project uses Python and Polars
-to explore patterns in a labeled text corpus.
+This project uses Python and Polars to explore how language and job requirements differ across three types of analytics positions.
 
-The example demonstrates:
+The analysis includes:
 
-- Representing a collection of documents as a corpus.
-- Tokenizing and cleaning text.
-- Computing global token frequencies.
-- Comparing token frequencies across categories.
-- Identifying frequently occurring words within categories.
-- Examining word co-occurrence using context windows.
-- Creating and counting bigrams.
-- Visualizing and interpreting token distributions.
+- Preparing the job descriptions for analysis.
+- Identifying the most frequently used words.
+- Comparing commonly used words across job categories.
+- Looking at which words tend to appear near each other.
+- Identifying common two-word phrases (bigrams).
+- Creating charts to show patterns and differences between job categories.
+- Reviewing the results to better understand the skills and responsibilities associated with each type of position.
 
-Explore these important project components:
+The goal is to see what can be learned by looking at words together, rather than just counting how often individual words appear.
 
-- [pyproject.toml](pyproject.toml) - project identity, dependencies, and tool configuration.
-- [src/nlp/nlp_corpus_explore.py](src/nlp/nlp_corpus_explore.py) - executable Python corpus analysis.
-- [tests/](tests/) - automated tests.
-- [.github/workflows/](.github/workflows/) - automated testing and documentation deployment.
-- [docs/](docs/) - project documentation.
-- [zensical.toml](zensical.toml) - documentation configuration.
+### Project Components
 
-The goal is to observe structure in text
-before applying machine learning or language models.
+- [pyproject.toml](pyproject.toml) - Project settings and dependencies.
+- [src/nlp/nlp_corpus_explore.py](src/nlp/nlp_corpus_explore.py) - Python script used for text analysis.
+- [tests/](tests/) - Automated tests.
+- [.github/workflows/](.github/workflows/) - Automated checks and documentation publishing.
+- [docs/](docs/) - Project documentation.
+- [zensical.toml](zensical.toml) - Documentation settings.
 
 ## Run the Project
 
@@ -125,7 +112,7 @@ uv run python -m pytest
 
 ## Project Documentation
 
-The [hosted documentation site](https://denisecase.github.io/nlp-03-text-exploration/)
+The [hosted documentation site](https://bethspornitz.github.io/nlp-03-text-exploration-custom/)
 is published using Zensical and GitHub Pages.
 
 The documentation site is used to present the project report,
@@ -139,8 +126,8 @@ to check project files and publish the docs.
 
 GitHub Actions include:
 
-- [CI: Python and Documentation Checks](https://github.com/denisecase/nlp-03-text-exploration/actions/workflows/ci-python-zensical.yml)
-- [CD: Documentation Deployment](https://github.com/denisecase/nlp-03-text-exploration/actions/workflows/deploy-zensical.yml)
+- [CI: Python and Documentation Checks](https://github.com/BethSpornitz/nlp-03-text-exploration-custom/actions/workflows/ci-python-zensical.yml)
+- [CD: Documentation Deployment](https://github.com/BethSpornitz/nlp-03-text-exploration-custom/actions/workflows/deploy-zensical.yml)
 
 ## Developer Reference
 
@@ -225,7 +212,7 @@ testing, documentation, and code quality.
 
 ## Links
 
-- [Hosted Documentation](https://denisecase.github.io/nlp-03-text-exploration/)
+- [Hosted Documentation](https://bethspornitz.github.io/nlp-03-text-exploration-custom/)
 - [Professional Python Workflow Guide](https://denisecase.github.io/pro-analytics-02/)
 - [Citation](CITATION.cff)
 - [License](LICENSE)
