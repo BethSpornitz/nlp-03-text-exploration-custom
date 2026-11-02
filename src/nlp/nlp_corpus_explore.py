@@ -322,7 +322,9 @@ print("\nBETH SPORNITZ SPECIFIC OBSERVATIONS:")
 print("- Increasing the context window from 2 to 3 revealed additional nearby words.")
 print("- The context for 'dog' increased from 7 to 9 words, adding 'kennel' and 'the'.")
 print("- The context for 'cat' increased from 8 to 9 words, adding another 'the'.")
-print("- The context for 'car' increased from 8 to 10 words, adding 'road' and 'the'.")
+print(
+    "- The full context for 'car' increased from 8 to 11 words, adding 'road' and 'the'."
+)
 print(
     "- The context for 'truck' increased from 7 to 9 words, adding 'engine' and 'loads'."
 )
