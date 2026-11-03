@@ -43,9 +43,9 @@ Increasing the window captured additional context for every target word.
 
 Examples included `kennel` near `dog`, `road` near `car`, and `engine` and `loads` near `truck`.
 
-The larger window also captured additional common words such as `the`. This demonstrates that a larger context window provides more surrounding information but does not necessarily produce more meaningful results.
+The larger window also captured additional common words like `the`. This shows that a larger context window provides more surrounding information but does not necessarily produce more meaningful results.
 
-The underlying corpus remained unchanged, so global word frequencies and bigram counts were unaffected.
+The underlying corpus remained unchanged, so word frequencies and bigram counts were not changed.
 
 ### Phase 4 Notebook
 
@@ -55,7 +55,7 @@ The notebook includes executable Python code, the original and modified experime
 
 ## Phase 5: Custom Application
 
-The custom application will analyze 12 paraphrased job descriptions across three categories:
+For my custom application, I analyzed 12 paraphrased job descriptions across three categories:
 
 | Category | Documents |
 |---|---:|
@@ -64,15 +64,49 @@ The custom application will analyze 12 paraphrased job descriptions across three
 | Data Governance | 4 |
 | **Total** | **12** |
 
-The planned analysis will examine:
+I used the same techniques from the instructor's example to compare word frequencies, vocabulary differences, co-occurrence patterns, and common two-word phrases.
 
-- Global token frequencies.
-- Vocabulary differences across job categories.
-- Word co-occurrence patterns.
-- Bigrams and recurring two-word skill phrases.
-- Visualizations of the results.
+### Results
 
-The results, interpretation, and limitations will be added after the custom analysis is completed.
+The three job categories showed some differences in their most frequently used words.
+
+- **Data Analyst:** Common terms included `develop`, `dashboards`, and `sql`.
+- **Business Analyst:** Common terms included `business`, `user`, and `requirements`.
+- **Data Governance:** Common terms included `governance`, `quality`, and `metadata`.
+
+Across all 12 descriptions, `and` was the most frequent word, appearing 47 times. This showed that common words can dominate the results when stop words are not removed.
+
+Looking at bigrams also revealed some interesting phrases:
+
+| Bigram | Frequency |
+|---|---:|
+| data quality | 6 |
+| data governance | 4 |
+| power bi | 3 |
+
+One thing I noticed was that the original code removed `BI` from `Power BI` because it was only two characters long. I changed the code to keep `bi`, which allowed the system to identify the complete phrase three times.
+
+### Visualization
+
+The chart shows the five most frequent tokens in each category. The word `and` appears most often in all three categories, which makes it harder to see differences in job related vocabulary. Removing stop words could help make those differences clearer.
+
+![Top five tokens by job category](images/job_category_top_tokens.png)
+
+### Interpretation and Limitations
+
+The results suggest that the Data Analyst descriptions focus more on technical reporting tools, Business Analyst descriptions emphasize users and requirements, and Data Governance descriptions focus more on data quality and management.
+
+Because the dataset includes only 12 paraphrased job descriptions, these findings describe this sample rather than the entire job market.
+
+The analysis also uses simple tokenization without general stop word removal, so common words such as `and` and `with` remain in the results.
+
+If I continued this project, I would try removing stop words to see whether that makes it easier to identify differences between the job categories.
+
+### Phase 5 Notebook
+
+The notebook includes the Python analysis, frequency tables, co-occurrence results, bigrams, a visualization, and interpretation.
+
+[View the Phase 5 Job Description Exploration Notebook](../notebooks/phase5_job_description_exploration.ipynb)
 
 ## Tools and Methods
 
@@ -96,6 +130,8 @@ The results, interpretation, and limitations will be added after the custom anal
 - [Python Analysis Script](https://github.com/BethSpornitz/nlp-03-text-exploration-custom/blob/main/src/nlp/nlp_corpus_explore.py)
 - [Phase 4 Notebook](https://github.com/BethSpornitz/nlp-03-text-exploration-custom/blob/main/notebooks/phase4_context_window_comparison.ipynb)
 - [Published Project Website](https://bethspornitz.github.io/nlp-03-text-exploration-custom/)
+- [Custom Python Script](https://github.com/BethSpornitz/nlp-03-text-exploration-custom/blob/main/src/nlp/job_description_explore.py)
+- [Phase 5 Notebook](https://github.com/BethSpornitz/nlp-03-text-exploration-custom/blob/main/notebooks/phase5_job_description_exploration.ipynb)
 
 ## Project Resources and Attribution
 

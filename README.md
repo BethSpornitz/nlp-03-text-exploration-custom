@@ -21,7 +21,7 @@ Third project in the Web Mining and Applied NLP course.
 
 This project explores patterns in job descriptions for three analytics career categories: Data Analyst, Business Analyst, and Data Governance.
 
-The analysis will explore token frequencies, category comparisons, word co-occurrence, and bigrams. Particular attention will be given to multi-word expressions such as "Power BI," "data quality," and "business requirements."
+The analysis explores token frequencies, category comparisons, word co-occurrence, and bigrams. Particular attention will be given to multi-word combinations such as "Power BI," "data quality," and "business requirements."
 
 The goal is to investigate which technical skills and terminology appear across these career categories and identify patterns that individual word frequencies may not reveal.
 
@@ -35,9 +35,9 @@ This project uses 12 job descriptions from a previous Module 2 project, divided 
 - Business Analyst: 4 job descriptions
 - Data Governance: 4 job descriptions
 
-Each job description includes the job title, employer, source link, and a rewritten description of the position.
+Each job description includes the job title, employer, source link, and a summarized description of the position.
 
-The descriptions will be used to compare the language and skills mentioned in different types of analytics jobs. The analysis will also look at phrases like "Power BI," "data quality," and "business requirements" to see what can be learned by examining words together rather than individually.
+The descriptions are used to compare the language and skills mentioned in different types of analytics jobs. The analysis will also look at phrases like "Power BI," "data quality," and "business requirements" to see what can be learned by examining words together rather than individually.
 
 Because the dataset includes only 12 job descriptions, the results will be used to explore patterns rather than draw conclusions about the entire job market.
 
@@ -51,7 +51,7 @@ The analysis includes:
 - Identifying the most frequently used words.
 - Comparing commonly used words across job categories.
 - Looking at which words tend to appear near each other.
-- Identifying common two-word phrases (bigrams).
+- Identifying common two-word phrases.
 - Creating charts to show patterns and differences between job categories.
 - Reviewing the results to better understand the skills and responsibilities associated with each type of position.
 
@@ -65,6 +65,10 @@ The goal is to see what can be learned by looking at words together, rather than
 - [.github/workflows/](.github/workflows/) - Automated checks and documentation publishing.
 - [docs/](docs/) - Project documentation.
 - [zensical.toml](zensical.toml) - Documentation settings.
+- [data/job_descriptions.csv](data/job_descriptions.csv) - Custom job description dataset.
+- [src/nlp/job_description_explore.py](src/nlp/job_description_explore.py) - Custom job description analysis.
+- [notebooks/phase4_context_window_comparison.ipynb](notebooks/phase4_context_window_comparison.ipynb) - Phase 4 context window comparison.
+- [notebooks/phase5_job_description_exploration.ipynb](notebooks/phase5_job_description_exploration.ipynb) - Phase 5 job description analysis.
 
 ## Run the Project
 
@@ -74,7 +78,7 @@ to set up your machine and project environment.
 From a VS Code terminal in the project root:
 
 ```shell
-uv run python -m nlp.nlp_corpus_explore
+uv run python -m nlp.job_description_explore
 ```
 
 Close each visualization window after viewing
@@ -82,12 +86,7 @@ so the script can continue executing.
 
 ## Results
 
-The analysis produces frequency distributions,
-category comparisons, co-occurrence information,
-and bigram frequencies.
-
-The results demonstrate how vocabulary and
-word proximity reveal patterns within a corpus.
+The job descriptions showed some differences in the words used for each career category. Data Analyst descriptions included terms like dashboards and SQL, while Business Analyst descriptions focused more on users and requirements. Data Governance descriptions included terms like quality and metadata. I also found that the original code removed "BI" from "Power BI" because it was only two characters long. After changing the code to keep "BI," the analysis identified the phrase "Power BI" three times.
 
 Successful execution produces:
 
