@@ -88,6 +88,10 @@ so the script can continue executing.
 
 The job descriptions showed some differences in the words used for each career category. Data Analyst descriptions included terms like dashboards and SQL, while Business Analyst descriptions focused more on users and requirements. Data Governance descriptions included terms like quality and metadata. I also found that the original code removed "BI" from "Power BI" because it was only two characters long. After changing the code to keep "BI," the analysis identified the phrase "Power BI" three times.
 
+The charts provide two different views of the results. The first compares the five most frequent individual words in each job category. The second highlights three selected bigrams: "data quality" (6), "data governance" (4), and "power bi" (3). The bigram chart shows how examining word pairs can reveal information that isn't obvious from individual word frequencies.
+
+![Key bigrams in job descriptions](docs/images/job_description_key_bigrams.png)
+
 Successful execution produces:
 
 ```shell

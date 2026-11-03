@@ -92,6 +92,12 @@ The chart shows the five most frequent tokens in each category. The word `and` a
 
 ![Top five tokens by job category](images/job_category_top_tokens.png)
 
+### Key Bigrams in Job Descriptions
+
+The word-frequency chart above shows individual words, while the chart below shows selected two-word phrases identified through bigram analysis. The analysis found "data quality" 6 times, "data governance" 4 times, and "power bi" 3 times. This shows how bigrams can identify meaningful phrases that may not stand out when examining individual words.
+
+![Key bigrams in job descriptions](images/job_description_key_bigrams.png)
+
 ### Interpretation and Limitations
 
 The results suggest that the Data Analyst descriptions focus more on technical reporting tools, Business Analyst descriptions emphasize users and requirements, and Data Governance descriptions focus more on data quality and management.
